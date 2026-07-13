@@ -1,0 +1,11 @@
+CREATE TABLE audit_logs (
+    id SERIAL PRIMARY KEY,
+    action VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);2026-07-13T10:00:09.637Z | GET /api/reports/employees
+2026-07-13T10:00:38.392Z | GET /api/reports/attendance-report
+2026-07-13T10:00:57.229Z | GET /api/reports/leave-report
+2026-07-13T10:01:46.863Z | GET /api/reports/employees
+2026-07-13T10:04:46.873Z | GET /api/reports/employees
+2026-07-13T10:05:40.064Z | GET /api/reports/attendance-report
+2026-07-13T10:06:30.905Z | GET /api/reports/leave-report

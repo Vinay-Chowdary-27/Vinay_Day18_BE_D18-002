@@ -1,0 +1,21 @@
+const express = require("express");
+
+const morgan = require("morgan");
+
+const auditLogger = require("./middleware/auditLogger");
+
+const reportRoutes = require("./routes/reportRoutes");
+
+const app = express();
+
+app.use(express.json());
+
+app.use(morgan("dev"));
+
+app.use(auditLogger);
+
+app.use("/api/reports", reportRoutes);
+
+app.listen(3000, () => {
+    console.log("Server Running On Port 3000");
+});
